@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login-page.css">
+    <script defer src="login-page.js"></script>
+</head>
+<style>html {
+    height: 100%;
+}
+
+body {
+    height: 70%;
+    margin: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #42ea25;
+}
+
+#main-holder {
+    width: 40%;
+    height: 70%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #b230e3;
+    border-radius: 7px;
+    box-shadow: 10px 10px 5px 2px black;
+}
+
+#login-error-msg-holder {
+    width: 150%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#login-error-msg {
+    width: 30%;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1c0502;
+    border: 5px solid #0b1f61;
+    background-color: #49efa3;
+    opacity: 0;
+}
+
+#error-msg-second-line {
+    display: block;
+}
+
+#login-form {
+    align-self: flex-start;
+    display: grid;
+    justify-items: normal;
+    align-items: center;
+}
+
+.login-form-field::placeholder {
+    color: #8e8efd;
+}
+
+.login-form-field {
+    border: none;
+    border-bottom:1px solid #3a3a3a;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: none;
+    padding: 10px 10px 10px 10px;
+}
+
+#login-form-submit {
+    width: 120%;
+    padding: 30px;
+    border: none;
+    border-radius: 5px;
+    color: #19ea0b;
+    font-color: white;
+    font-weight: bold;
+    background-color: #7732f1;
+    cursor: pointer;
+    outline: #1c0502;
+}
+
+#clear-page-field {
+    width: 24%;
+    padding: 20%;
+    border: 20px;
+    border-radius: 1px;
+    color: #0d0e0d;
+    font-color: white;
+    font-weight: bold;
+    background-color: #eeeef5;
+    cursor: pointer;
+    outline: #b46767;
+    padding: 10px 10px 10px 10px;
+}</style>
+<body>
+<main id="main-holder">
+    <h1 id="login-header">Login Page</h1>
+
+    <div id="login-error-msg-holder">
+        <p id="login-error-msg">Login failed due to  <span id="error-msg-second-line">incorrect username and/or password</span></p>
+    </div>
+
+    <form method="post" id="login-form" action="next_page.html">
+
+        <label for="username-field"></label><input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+        <label for="password-field"></label><input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+        <input type="submit" value="Login" id="next_page.html">
+        <label for="clear-page"></label><input type="reset" name="reset" id="clear-page" class="clear-page-field" placeholder="Username">
+
+    </form>
+
+</main>
+
+<script >const loginForm = document.getElementById("login-form");
+const loginButton = document.getElementById("next_page.html");
+const loginErrorMsg = document.getElementById("login-error-msg");
+
+loginButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const username = loginForm.username.value;
+    const password = loginForm.password.value;
+
+    if (username === "newuser" && password === "newword") {
+
+        //window.open('next_page.html');
+
+        alert("“Login Successful!");
+
+        location.reload();
+    } else {
+        loginErrorMsg.style.opacity = 1;
+    }
+})</script>
+</body>
+
+</html>
