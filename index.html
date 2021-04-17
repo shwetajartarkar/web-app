@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="login-page.css">
+    <link rel="stylesheet" href="styles.css">
     <script defer src="login-page.js"></script>
 </head>
-<style>html {
+/*<style>html {
     height: 100%;
 }
 
@@ -103,7 +103,7 @@ body {
     cursor: pointer;
     outline: #b46767;
     padding: 10px 10px 10px 10px;
-}</style>
+}</style>*/
 <body>
 <main id="main-holder">
     <h1 id="login-header">Login Page</h1>
@@ -133,7 +133,7 @@ loginButton.addEventListener("click", (e) => {
     const password = loginForm.password.value;
 
     if (username === "newuser" && password === "newword") {
-
+        window.open('next_page.html');
         alert("“Login Successful!");
 
         location.reload();
