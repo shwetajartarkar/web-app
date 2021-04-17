@@ -1,3 +1,5 @@
-# Vanilla JavaScript App
+# web-page-app
 
-This repo is used as a starter for a _very basic_ HTML web application using no front-end frameworks.
+##Instructions to run
+1. open the project in a web development IDE and run login-page.html. 
+2. alternatively, open URL: https://orange-tree-067b57a10.azurestaticapps.net in Chrome browser
